@@ -87,3 +87,11 @@ Layout {
     margin: 0 auto;
     width: 80vw;
 }
+
+/* button */
+
+button {
+    height: 30px;
+    width: 200px;
+
+}
