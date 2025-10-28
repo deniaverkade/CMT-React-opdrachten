@@ -1,17 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
-const Time = () => {
-    const [currentTime, setCurrentTime]  =  useState(new Date());
 
-    useEffect(() => {
-        const intervalId =  setInterval(()  => {
-            const updateTime = currentTime.getTime;
-            
+const Clock = () => {
+    const [currentTime, setCurrentTime] = useState(new Date());
 
-        },1000);
-    })
-}
 
-const DateToday = () => {
+useEffect(()=> {
     
+
+    const timer = setInterval(()=>{
+        setCurrentTime(new Date());
+        return () => {
+            clearInterval(timer);
+            
+        }
+
+    },1000)
+  
+
+    
+
+
+},[]);
+  
+
+return (<>
+    <h1>Huidige tijd: {currentTime.toLocaleTimeString()}</h1>
+    </>)
 }
+
+        
+        
+
+ 
+export default Clock;
