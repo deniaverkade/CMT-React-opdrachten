@@ -1,18 +1,21 @@
 import './App.css'
-import BookList from './components/BookList'
-import Header from './components/Header'
-import Layout from './Layout'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./Pages/Home";
+import About from './Pages/About';
+import NoPage from './Pages/NoPage';
+import Contact from "./Pages/Contact";
 
 function App() {
 
   return (
-    <>
-    <Header/>
-    <Layout>
-      <BookList/>
-    </Layout>
-    
-    </>
+ <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
