@@ -1,42 +1,150 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* { 
+  margin:0;
+  padding: 0;
+  background-color: rgb(253, 219, 155);
+}
+
+img {
+  height: 140px;
+  width: 480px;
+  margin-left: 2%;
+  margin-top: 1.5%;
+  object-fit: cover;
+  margin-bottom: 1%;
+  border-radius: 5px;
+
+}
+
+.animalContainer{
+width: 500px;
+background-color: rgb(245, 230, 207);
+height: 210px;
+padding: 0.2%;
+margin-bottom: 2%;
+border-radius: 5px;
+box-shadow: 1px 1px 5px rgb(104, 68, 48);
+transition: height 1s;
+}
+
+.frontpageButtons{
+  margin-left: 70%;
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+  opacity: 0%;
+  margin-top: 0%;
+}
+
+.frontpageNames{
+  background-color: rgb(245, 230, 207);
+  color:rgb(100, 53, 26);
+  width: 75px;
+  margin-left: 2%;
+  padding-bottom: 0%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: rgb(253, 219, 155);
+    }
+
+.frontpageTitle{
+  color:rgb(128, 62, 31);
+margin-bottom: 3%;
+text-align: center;
+ background-color: rgb(253, 219, 155);
+}
+
+.animalContainer:hover {
+background-color: rgb(240, 222, 208);
+animation-name: slide-down;
+animation-duration: 1s;
+height: 240px;
+}
+
+.animalContainer:hover > .frontpageNames {
+  background-color: rgb(240, 222, 208);
+}
+
+.animalContainer:hover > .frontpageButtons {
+  visibility: visible;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  opacity: 100%;
+  transition: opacity 1s ease-in;
+}
+
+
+
+@keyframes slide-down {
+  0% {height:200px}
+
+  100% {height:240px}
+}
+
+
+
+@keyframes fade-in{
+0%{opacity: 0%}
+50%{opacity: 0%;}
+75%{opacity: 50%;}
+100%{opacity: 100%;}
+}
+
+/* detailpagina */
+
+.detailContainer {
+background-color: rgb(245, 230, 207);
+color:rgb(100, 53, 26);
+height: 800px;
+width: 650px;
+box-shadow: 1px 1px 5px rgb(104, 68, 48);
+border-radius: 5px;
+margin-left: 100%;
+
+}
+
+h1 {
+  background-color: rgb(245, 230, 207);
   text-align: center;
+  margin-bottom: 5%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h2 {
+    background-color: rgb(245, 230, 207);
+    text-align: center;
+    padding-bottom: 5%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+    background-color: rgb(245, 230, 207);
+    color:rgb(148, 85, 49);
+    text-align: center;
+    font-size: 20px;
+    padding: 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+b {
+  background-color: rgb(245, 230, 207);
+  color:rgb(100, 53, 26);
+}
+span {
+  color:rgb(148, 85, 49);
+  background-color: rgb(245, 230, 207);
+  
 }
 
-.card {
-  padding: 2em;
+.img2 {
+  height: 400px;
+  width: 600px;
+  margin-left: 4%;
+  margin-top: 3%;
 }
 
-.read-the-docs {
-  color: #888;
+button {
+  margin-left: 43%;
+  margin-top: 1%;
+  background-color: rgb(190, 112, 38);
 }
