@@ -6,14 +6,17 @@ import { useState } from "react";
 
 function App() {
 
-    const [textInput, setTextInput] = useState("");
-    const [newtask, setNewtask] = useState([]);
+  const [textInput, setTextInput] = useState("");
+  const [newtask, setNewtask] = useState([]);
 
 
   return (
     <>
-    <CreateTask textInput={textInput} setTextInput={setTextInput} newtask={newtask} setNewtask={setNewtask}/>
-      <TaskList newtask={newtask}/>
+      <div class="ml-130">
+        <h1 class="text-white text-9xl font-arial font-bold">To Do List</h1>
+        <CreateTask textInput={textInput} setTextInput={setTextInput} newtask={newtask} setNewtask={setNewtask} />
+        <TaskList newtask={newtask} />
+      </div>
     </>
   )
 }
