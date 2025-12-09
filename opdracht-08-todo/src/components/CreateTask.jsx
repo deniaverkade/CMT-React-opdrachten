@@ -19,7 +19,7 @@ const CreateTask = ({ textInput, setTextInput, newtask, setNewtask }) => {
             <textarea name="" id="" cols="50" rows="5" onChange={userInputHandler} value={textInput}>
 
             </textarea><br></br>
-            <button onClick={submitMessageHandler}>Toevoegen</button>
+            <button onClick={submitMessageHandler}>Nieuwe taak toevoegen</button>
         </form>
     </>);
 }
