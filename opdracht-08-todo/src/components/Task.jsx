@@ -1,8 +1,7 @@
-const Task = (taakid,taakcontent) => {
+const Task = ({newtask}) => {
     return (<>
-    <div className="taskdiv" key={taakid}>
-        <p>{taakcontent}</p>
-    </div>
+    <div className="taskdiv" >
+    <p>{newtask}</p></div>
     </>);
 }
 
