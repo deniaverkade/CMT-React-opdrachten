@@ -1,10 +1,6 @@
-import { useState } from "react";
 
-const CreateMessage = () => {
 
-    const [textInput, setTextInput] = useState("");
-    const [message, setMessage] = useState([]);
-    
+const CreateMessage = ({textInput, setTextInput, message, setMessage}) => {
 
     const userInputHandler = (e) => {
         setTextInput(e.target.value);
@@ -13,15 +9,19 @@ const CreateMessage = () => {
     const submitMessageHandler = (e) => {
         e.preventDefault();
 
-        setMessage([...message,textInput])
+        setMessage([...message, textInput])
         setTextInput("");
+
+
+
     };
 
     return (<>
         <form action="">
-        <textarea name="" id="" cols="50" rows="5" onChange={userInputHandler}>
-            <button onClick={submitMessageHandler}>Toevoegen</button>
-        </textarea>
+        <textarea name="" id="" cols="50" rows="5" onChange={userInputHandler} value={textInput}>
+            
+        </textarea><br></br>
+        <button onClick={submitMessageHandler}>Toevoegen</button>
         </form>
     </>);
 }
