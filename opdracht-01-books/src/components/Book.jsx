@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Book = ({cover,title,author}) => {
+const Book = ({cover,title,author,genre}) => {
     const [aantalKeerGelezen, setAantalKeerGelezen] = useState(0);
     const verhoogTeller =  () => {
         setAantalKeerGelezen(aantalKeerGelezen+1)
@@ -10,6 +10,7 @@ const Book = ({cover,title,author}) => {
             <img src={cover}/>
             <h2>{title}</h2>
             <h3>{author}</h3>
+            <h4>{genre}</h4>
             <button onClick={verhoogTeller}>Aantal keer gelezen: {aantalKeerGelezen}</button>
         </>
      );
