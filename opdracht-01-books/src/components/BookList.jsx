@@ -66,7 +66,7 @@ const BookList = () => {
 
       </div>
       <div className="search">
-        <input type="text" placeholder="Zoek hier uw boek" name="search" onChange={searchHandler} value={searchInput} />
+        <input type="text" placeholder="Zoek hier uw boek" name="search" onChangeCapture={searchHandler} value={searchInput} />
 
       </div>
       <div className="filter">
