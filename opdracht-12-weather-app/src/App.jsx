@@ -6,7 +6,7 @@ function App() {
 
   const apiKey = "124472a4455476e91b1747a98f6be8d6";
   const [city, setCity] = useState('rotterdam');
-  const [weatherData, setWeatherData] = useState([]);
+  const [weatherData, setWeatherData] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [searchInput, setSearchInput] = useState("");
