@@ -39,10 +39,11 @@ e.preventDefault()
 
   return (
     <>
+    <div class="flex flex-wrap w-102 h-150 ml-180 bg-amber-200 border-10 border-amber-900 rounded-4xl mt-30">
       <form>
-        <input type="text" placeholder="Typ hier uw stad" name="search" value={searchInput} onChange={searchHandler} />
-        <button  onClick={submitHandler}>Zoeken</button>
-      </form>
+        <input type="text" class="border-b-black border-2 mt-4 w-75 h-12 text-2xl ml-10 text-center" placeholder="Typ hier uw stad" name="search" value={searchInput} onChange={searchHandler} /><br></br>
+        <button  class="bg-amber-500 border-8 border-amber-900 w-45 h-12 text-2xl mt-5 pb-9 ml-25"onClick={submitHandler}>Zoeken</button>
+      </form><br></br>
 
       {weatherData ? 
       
@@ -58,7 +59,7 @@ e.preventDefault()
       />
     : <p>Data aan het laden</p>}
 
-
+    </div>
     </>
   )
 }
