@@ -16,7 +16,7 @@ const WeatherInfo = ({ weatherIcon, cityName, weatherTemp, weatherChill, weather
             <div>
                 <h3>Gevoelstemperatuur: {weatherChill}</h3>
                 <h3>Luchtvochtigheid: {weatherHumidity}%</h3>
-                <h3>Windsnelheid: {weatherWind} </h3>
+                <h3>Windsnelheid: {weatherWind} km/u</h3>
             </div>
 
 
