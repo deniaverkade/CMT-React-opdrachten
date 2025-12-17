@@ -1,5 +1,5 @@
-
-const AddMovie = ({ onAdd })  => {
+import { useState } from "react";
+const AddMovie = ({ onAdd ,key2})  => {
   const [movie, setMovie] = useState('');
 
   const handleSubmit = (e) => {
@@ -9,13 +9,13 @@ const AddMovie = ({ onAdd })  => {
       return;
     }
     onAdd(movie); 
- 
+   setMovie('');
   };
 
-  setMovie(''); 
+ 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} key={key2}>
       <input 
         type="text"
         value={movie}

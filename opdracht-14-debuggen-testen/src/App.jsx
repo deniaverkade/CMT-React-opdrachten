@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import AddMovie from './components/AddMovie';
 import MovieList from './components/MovieList';
+import { useState } from "react";
 
 import './App.css';
 
@@ -8,11 +9,11 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   const addMovie = (newMovie) => {
-    if (!movies.includes(newMovie)) {
+    if (movies.includes(newMovie)) {
       alert('This movie is already in your favorites!');
       return;
     }
-    setMovie([...movies, newMovie]);
+    setMovies([...movies, newMovie]);
   };
 
   const deleteMovie = (movieToDelete) => {
@@ -22,8 +23,8 @@ function App() {
   return (
     <section className='container'>
       <Header />
-      <AddMovie onAdd={addMovie} />
-      <MovieList movies={movies} onDelete={deleteMovie} />
+      <AddMovie onAdd={addMovie} key2={2}/>
+      <MovieList movies={movies} onDelete={deleteMovie} key={1}/>
     </section>
   );
 }
