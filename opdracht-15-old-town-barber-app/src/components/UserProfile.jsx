@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 
 
-const UserProfile = ({saveProfile}) => {
+const UserProfile = ({ saveProfile }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -11,16 +11,16 @@ const UserProfile = ({saveProfile}) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if(!name.trim() || !email.trim() || !phone.trim()){
+        if (!name.trim() || !email.trim() || !phone.trim()) {
             toast.error("Vul alle velden in!");
             return;
         }
-        saveProfile({name, email, phone})
+        saveProfile({ name, email, phone })
     }
     return (<section>
 
         <h2>Jouw profiel</h2>
-        <form onSubmit={handleSubmit}> 
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="naam"
@@ -37,7 +37,8 @@ const UserProfile = ({saveProfile}) => {
                 type="tel"
                 placeholder="telefoon"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)} /><br></br>
+                onChange={(e) => setPhone(e.target.value)}
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" /><br></br>
 
 
             <button type="submit">Profiel aanmaken</button>
