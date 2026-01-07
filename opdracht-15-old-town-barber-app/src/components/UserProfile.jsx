@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 
 
-const UserProfile = () => {
+const UserProfile = ({saveProfile}) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -25,19 +25,19 @@ const UserProfile = () => {
                 type="text"
                 placeholder="naam"
                 value={name}
-                onChange={(e) => setName = (e.target.value)} /><br></br>
+                onChange={(e) => setName(e.target.value)} /><br></br>
 
             <input
-                type="text"
+                type="email"
                 placeholder="email"
                 value={email}
-                onChange={(e) => setEmail = (e.target.value)} /><br></br>
+                onChange={(e) => setEmail(e.target.value)} /><br></br>
 
             <input
-                type="text"
+                type="tel"
                 placeholder="telefoon"
                 value={phone}
-                onChange={(e) => setPhone = (e.target.value)} /><br></br>
+                onChange={(e) => setPhone(e.target.value)} /><br></br>
 
 
             <button type="submit">Profiel aanmaken</button>
