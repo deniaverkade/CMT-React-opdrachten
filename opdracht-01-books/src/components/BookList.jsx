@@ -82,7 +82,7 @@ const BookList = () => {
         {books.map(book => (
           <div key={book.id} className="book-container">
 
-            <Book cover={book.cover} title={book.title} author={book.author} genre={book.genre} />
+            <Book cover={book.cover} title={book.title} author={book.author} genre={book.genre} description={book.description} year={book.year} pages={book.pages} />
           </div>
         ))}
 
