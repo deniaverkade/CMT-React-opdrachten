@@ -2,6 +2,13 @@ import { useState } from "react";
 
 const Book = ({cover,title,author,genre}) => {
     const [aantalKeerGelezen, setAantalKeerGelezen] = useState(0);
+    const [liked, setLiked] = useState(false);
+
+    function toggleLike() {
+        if (liked===false){setLiked(true)}
+        else{setLiked(false)};
+    };
+
     const verhoogTeller =  () => {
         setAantalKeerGelezen(aantalKeerGelezen+1)
     }
@@ -11,6 +18,7 @@ const Book = ({cover,title,author,genre}) => {
             <h2>{title}</h2>
             <h3>{author}</h3>
             <h4>{genre}</h4>
+            {liked ? <p><button onClick={toggleLike}>❤️</button><span>Toegevoegd aan favorieten.</span></p>: <button onClick={toggleLike}>🤍</button>}
             <button onClick={verhoogTeller}>Aantal keer gelezen: {aantalKeerGelezen}</button>
         </>
      );
